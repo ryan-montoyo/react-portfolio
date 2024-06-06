@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoTitle from '../../assets/images/logo-s.png'
+import LogoTitle from '../../assets/images/rm-logo.png'
 import './index.scss'
 import { useEffect, useState } from 'react';
 import Logo from './Logo';
@@ -8,7 +8,7 @@ import AnimatedLetters from '../AnimatedLetters';
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
 
-    const nameArray = ['y', 'a', 'n']
+    const nameArray = ['y', 'a', 'n',',']
     const jobArray = [
       'S',
       'o',
@@ -31,31 +31,35 @@ const Home = () => {
     ]
   
     useEffect(() => {
-        const timeoutId = setTimeout(() => {
-          setLetterClass('text-animate-hover');
-        }, 4000);
-      
-        // Return a cleanup function to clear the timeout
-        return () => clearTimeout(timeoutId);
-      }, []);
-      
+      const timeoutId = setTimeout(() => {
+        setLetterClass('text-animate-hover');
+      }, 3500);
 
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }, []);
+      
+      
     return (
         <div className="container home-page">
             <div className="text-zone">
                 <h1> 
                 <span className={letterClass}>H</span>
-                <span className={`${letterClass} _12`}>i,</span>
+                <span className={`${letterClass} _12`}>i</span>
+                <span className={`${letterClass} _12`}>,</span>
                 <br /> 
                 <span className={`${letterClass} _13`}>I</span>
-                <span className={`${letterClass} _14`}>'m</span>
+                <span className={`${letterClass} _14`}>'</span>
+                <span className={`${letterClass} _14`}>m</span>
                 <img src={LogoTitle} alt="developer"/>
-                <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15}/> 
+                <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={8}/> 
                 <br/>
-                <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={18}/> 
+                <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={12}/> 
                 </h1>
-                <h2>Fullstack Developer / Student </h2>
+                <h2>Fullstack Developer / Mobile Developer / Student </h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                <Link to="/assets/images/Ryan-Montoyo-Resume.pdf" className='flat-button'>MY RESUME</Link>
             </div>
             <Logo />
         </div>

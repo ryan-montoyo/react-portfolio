@@ -46,7 +46,7 @@
             }
 
             &:hover {
-                color: #87CEEB;
+                color: #ffd700;
 
                 svg {
                     opacity: 0;
@@ -81,6 +81,11 @@
                 content: 'ABOUT';
             }
         }
+        a.projects-link {
+            &:after {
+                content: 'PROJECTS';
+            }
+        }
         a.contact-link {
             &:after {
                 content: 'CONTACT';
@@ -89,7 +94,7 @@
 
         a.active {
             svg {
-                color: #87CEEB;
+                color: #ffd700;
             }
         }
     }
@@ -111,7 +116,7 @@
                 line-height: 16px;
 
                 &:hover svg {
-                    color: #87CEEB;
+                    color: #ffd700;
                 }
             }
         }

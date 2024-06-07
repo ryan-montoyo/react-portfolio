@@ -1,0 +1,49 @@
+{
+    "portfolio" : [
+        {
+            "cover": "/projects/1/Screenshot 2024-06-07 at 6.59.28 PM.png",
+            "title": "Avengers Careers",
+            "subtitle": "Job Application Site",
+            "description": "Python/Flask, HTML/CSS, MySQL",
+            "url": "https://avengers-careers.onrender.com/",  
+            "git": "https://github.com/ryan-montoyo/flask-website-project",
+            "live": true
+        },
+        {
+            "cover": "/projects/1/Rooster TUNES_Cropped.jpg",
+            "title": "Rooster Tunes",
+            "subtitle": "Discord Music Bot",
+            "description": "Python, Discord API",
+            "url": " ",  
+            "git": "https://github.com/ryan-montoyo/arnys-party-discord-bot",
+            "live": false
+        },
+        {
+            "cover": "/projects/1/Screenshot 2024-06-07 at 7.01.57 PM.png",
+            "title": "Portfolio Site",
+            "subtitle": "My first portfolio site created",
+            "description": "HTML, CSS, JavaScript",
+            "url": "https://montoyo.dev/",  
+            "git": "https://github.com/ryan-montoyo/html-css-js-portfolio",
+            "live": true
+        },
+        {
+            "cover": "/projects/1/Screenshot 2024-04-19 at 2.27.06 PM.png",
+            "title": "Memory Match",
+            "subtitle": "Mini Web Game",
+            "description": "HTML, CSS, JavaScript",
+            "url": "http://google.com",  
+            "git": "github.com",
+            "live": true
+        },
+        {
+            "cover": "/projects/1/Screenshot 2024-06-07 at 7.08.34 PM.png",
+            "title": "Gender and War Info Site",
+            "subtitle": "Gender Studies Project",
+            "description": "HTML, CSS, JavaScript",
+            "url": "https://genderandwar.netlify.app/",  
+            "git": "https://github.com/ryan-montoyo/WGSP",
+            "live": true
+        }
+    ]
+}

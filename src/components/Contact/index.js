@@ -42,7 +42,7 @@ const Contact = () => {
                     <AnimatedLetters 
                     letterClass={letterClass}
                     strArray={['C','o','n','t','a','c','t',' ','M','e']}
-                    idx={15}/>
+                    idx={9}/>
                 </h1>
                 <p>
                     I am interested in all Software Engineering opportunities from freelancing to internships/full time positions!
@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
 
         </div>
-        <Loader type='pacman' ></Loader>
+        <Loader type='ball-pulse-sync' ></Loader>
         </>
     )
 }

@@ -15,11 +15,12 @@
         img{
             display: block;
             margin: 8px auto;
-            width: 24px;
+            width: 40px;
             height: auto;
 
             &.sub-logo {
                 width: 50px;
+                
             }
         }
     }
@@ -46,7 +47,7 @@
             }
 
             &:hover {
-                color: #ffd700;
+                color: #1eb8ff;
 
                 svg {
                     opacity: 0;
@@ -94,7 +95,7 @@
 
         a.active {
             svg {
-                color: #ffd700;
+                color: #1eb8ff;
             }
         }
     }
@@ -116,7 +117,7 @@
                 line-height: 16px;
 
                 &:hover svg {
-                    color: #ffd700;
+                    color: #1eb8ff;
                 }
             }
         }

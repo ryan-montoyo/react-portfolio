@@ -38,15 +38,16 @@ const Logo = () => {
 
   return (
     <div className="logo-container" ref={bgRef}>
-      <img
+      {/* <img
         className="solid-logo"
         ref={solidLogoRef}
         src={LogoS}
         alt="JavaScript,  Developer"
-      />
+      /> */}
 
       <svg
         width="559pt"
+        opacity={0}
         height="897pt"
         version="1.0"
         viewBox="0 0 559 897"
@@ -68,3 +69,7 @@ const Logo = () => {
 }
 
 export default Logo
+
+
+
+

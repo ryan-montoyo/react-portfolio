@@ -11,6 +11,8 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
+import cpp from '../../assets/images/cpplogo.png'
+import py from '../../assets/images/pylogo.png'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -41,12 +43,19 @@ const About = () => {
             I am a Full Stack Developer who is currently searching for Software Engineering internships. 
             As a passionate coder, I love bringing ideas to life through software solutions. Feel free to contact or connect with me!
             </p>
+            <p>
+            Hello, I'm Ryan Montoyo. I am currently a rising senior at Hunter College pursuing a Bachelor's Degree in Computer Science. 
+            I am a Full Stack Developer who is currently searching for Software Engineering internships. 
+            As a passionate coder, I love bringing ideas to life through software solutions. Feel free to contact or connect with me!
+            </p>
+
+
         </div>
 
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+              <img src={cpp} alt="c++ Logo" style={{ width: '50%', height: '50%' }}/>
             </div>
             <div className="face2">
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />
@@ -61,12 +70,12 @@ const About = () => {
               <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
             </div>
             <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+                <img src={py} alt="python Logo" style={{ width: '50%', height: '50%' }}/>
             </div>
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="ball-pulse-sync" />
     </>
   )
 }

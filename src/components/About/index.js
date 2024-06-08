@@ -41,12 +41,16 @@ const About = () => {
           <p>
             Hello, I'm Ryan Montoyo. I am currently a rising senior at Hunter College pursuing a Bachelor's Degree in Computer Science. 
             I am a Full Stack Developer who is currently searching for Software Engineering internships. 
-            As a passionate coder, I love bringing ideas to life through software solutions. Feel free to contact or connect with me!
+            <br></br>
+            <br></br>
+            As a passionate coder, I love bringing ideas to life through software solutions.
+            I am also devoted to continuous learning and 'being a sponge' as much as I can as it makes me better and allows me to have larger contributions to all of my tasks. 
             </p>
             <p>
-            Hello, I'm Ryan Montoyo. I am currently a rising senior at Hunter College pursuing a Bachelor's Degree in Computer Science. 
-            I am a Full Stack Developer who is currently searching for Software Engineering internships. 
-            As a passionate coder, I love bringing ideas to life through software solutions. Feel free to contact or connect with me!
+            Some of my techincal skills include: C++, Python, JavaScript, HTML, CSS, SQL, React, Flask, MySQL, JSON, Firebase and much more!
+            <br></br>
+            <br></br>
+            Feel free to contact or connect with me!
             </p>
 
 

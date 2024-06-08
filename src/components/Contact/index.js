@@ -22,14 +22,14 @@ const Contact = () => {
         e.preventDefault()
     
         emailjs
-          .sendForm('gmail', 'template_cpl6659', refForm.current, 'ukcJLNvptHpBkk9l6')
+          .sendForm('service_5b76jmo', 'template_cpl6659', refForm.current, 'ukcJLNvptHpBkk9l6')
           .then(
             () => {
               alert('Message successfully sent!')
               window.location.reload(false)
             },
             () => {
-              alert('Failed to send the message, please try again')
+              alert('Failed to send the message, please refresh and try again.')
             }
           )
       }
@@ -52,10 +52,10 @@ const Contact = () => {
                     <form ref={refForm} onSubmit={sendEmail}>
                         <ul>
                             <li className='half'>
-                                <input type='text' name='name' placeholder='Name' required></input>
+                                <input type='text' name='from_name' placeholder='Name' required></input>
                             </li>
                             <li className='half'>
-                                <input type='email' name='email' placeholder='Email' required></input>
+                                <input type='email' name='from_email' placeholder='Email' required></input>
                             </li>
                             <li>
                                 <input placeholder='Subject' type='text' name='subject' required></input>

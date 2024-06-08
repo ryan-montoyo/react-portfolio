@@ -32,8 +32,8 @@
             "title": "Memory Match",
             "subtitle": "Mini Web Game",
             "description": "HTML, CSS, JavaScript",
-            "url": "http://google.com",  
-            "git": "github.com",
+            "url": "https://ryans-memory-match.netlify.app/",  
+            "git": "https://github.com/ryan-montoyo/Memory-Bomb-Game",
             "live": true
         },
         {

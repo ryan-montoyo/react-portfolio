@@ -26,7 +26,7 @@ const Drawing = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 1200) {
-        setViewBox("110 0 1000 800"); // Adjust viewBox for mobile screen
+        setViewBox("120 0 1000 800"); // Adjust viewBox for mobile screen
       } else {
         setViewBox("0 0 800 800"); // Default viewBox for desktop screen
       }

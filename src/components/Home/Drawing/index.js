@@ -4,6 +4,8 @@ import './index.scss';
 
 const Drawing = () => {
   const [key, setKey] = useState(0);
+  const [viewBox, setViewBox] = useState("0 0 800 800"); // Initial viewBox value
+
 
   const animateSVG = () => {
     anime({
@@ -21,9 +23,24 @@ const Drawing = () => {
     animateSVG();
   }, [key]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1200) {
+        setViewBox("110 0 1000 800"); // Adjust viewBox for mobile screen
+      } else {
+        setViewBox("0 0 800 800"); // Default viewBox for desktop screen
+      }
+    };
+
+    handleResize(); // Call handleResize initially
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Run this effect only once when the component mounts
+
   return (
     <div>
-      <svg viewBox="0 0 800 800" className="logo-svg" style={{ fill: 'none', stroke: '#1eb8ff' }}>
+      <svg viewBox={viewBox} className="logo-svg" style={{ fill: 'none', stroke: '#1eb8ff' }}>
         <g id="bg"></g>
         <g id="graphic">
           <g>
@@ -222,7 +239,5 @@ const Drawing = () => {
 };
 
 export default Drawing;
-
-
 
 

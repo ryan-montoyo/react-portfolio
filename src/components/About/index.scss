@@ -1,3 +1,5 @@
+
+
 .stage-cube-cont {
     width: 50%;
     height: 100%;
@@ -7,75 +9,165 @@
     position: absolute;
     right: 0;
     overflow: hidden;
+}
+
+.cubespinner {
+animation-name: spincube;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 12s;
+transform-style: preserve-3d;
+transform-origin: 100px 100px 0;
+margin-left: calc(50% - 100px);
+
+div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px lightyellow;
+}
+
+.face1 {
+    transform: translateZ(100px);
+    color: #dd0031;
+}
+.face2 {
+    transform: rotateY(90deg) translateZ(100px);
+    color: #f06529;
+}
+.face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    color: #28a4d9;
+}
+.face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    color: #5ed4f4;
+}
+.face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    color: #efd81d;
+}
+.face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+    color: #ec4d28;
+}
+}
+
+@keyframes spincube {
+from,
+to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+16% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+}
+33% {
+    transform: rotateY(-90deg) rotateX(90deg);
+}
+50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+}
+66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+}
+83% {
+    transform: rotateX(90deg);
+}
+}
+.block {
+    display: none;
+  }
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white; // Customize star color
+    border-radius: 50%; // Make the star round
   }
   
-  .cubespinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
-  
-    div {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border: 1px solid #ccc;
-      background: rgba(255, 255, 255, 0.4);
-      text-align: center;
-      font-size: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 0 20px 0px lightyellow;
-    }
-  
-    .face1 {
-      transform: translateZ(100px);
-      color: #dd0031;
-    }
-    .face2 {
-      transform: rotateY(90deg) translateZ(100px);
-      color: #f06529;
-    }
-    .face3 {
-      transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
-      color: #28a4d9;
-    }
-    .face4 {
-      transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
-      color: #5ed4f4;
-    }
-    .face5 {
-      transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
-      color: #efd81d;
-    }
-    .face6 {
-      transform: rotateX(-90deg) translateZ(100px);
-      color: #ec4d28;
-    }
+  .moving-stars-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw; // Limit the width to the right half of the screen
+    height: 100vh;
+    overflow: hidden; // Hide overflow to prevent scrollbars
+    pointer-events: none; // Make the stars not interactable
+    z-index: -3; // Move the stars behind other content
+    animation: move-stars 10s linear infinite; // Adjust animation duration as needed
   }
   
-  @keyframes spincube {
-    from,
+  .second-wave {
+    animation-delay: 5s; // Delay the animation for the second wave
+  }
+  
+  @keyframes move-stars {
+    from {
+      transform: translateY(100vh); // Start from the bottom of the page
+    }
     to {
-      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    }
-    16% {
-      transform: rotateY(-90deg) rotateZ(90deg);
-    }
-    33% {
-      transform: rotateY(-90deg) rotateX(90deg);
-    }
-    50% {
-      transform: rotateY(-180deg) rotateZ(90deg);
-    }
-    66% {
-      transform: rotateY(-270deg) rotateX(90deg);
-    }
-    83% {
-      transform: rotateX(90deg);
+      transform: translateY(-100vh); // Move to the top of the page
     }
   }
+
+@media screen and (max-width: 1200px) {
+  .stage-cube-cont {
+    position: initial;
+    width: 100%;
+    height: 0%;
+    overflow: visible;
+  }
+  .block {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64vh;
+    background-color: #0d1430; /* Semi-transparent black */
+    z-index: -1; /* Ensure it's behind other content */
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white; // Customize star color
+    border-radius: 50%; // Make the star round
+  }
+  
+  .moving-stars-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw; /* Limit the width to the right half of the screen */
+    height: 100vh; /* Limit the height to the viewport height */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    pointer-events: none; /* Make the stars not interactable */
+    z-index: -3; /* Move the stars behind other content */
+    animation: move-stars 10s linear infinite; /* Adjust animation duration as needed */
+  }
+  
+  .second-wave {
+    animation-delay: 5s; // Delay the animation for the second wave
+  }
+  
+  @keyframes move-stars {
+    from {
+      transform: translateY(100vh); /* Start from the bottom of the page */
+      opacity: 1; /* Start with full opacity */
+    }
+    
+    to {
+      transform: translateY(0vh); /* Move to the top of the page */
+      opacity: 0; /* Fade out completely */
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .home-page {
+  
   .text-zone {
       position: absolute;
       left: 10%;
@@ -75,51 +76,59 @@
       white-space: nowrap;
 
       &:hover {
+        cursor: pointer;
           background: #00A9FF;
           color: #333;
       }
   }
 }
 
-// @media screen and (max-width: 1200px) {
-//   .tags,
-//   .home-page h1:before,
-//   .home-page h1:after {
-//       display: none;
-//   }
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+      display: none;
+  }
+  
+  .home-page {
+    overflow-x: hidden;
+    .text-zone{
+      position: initial;
+      width: 100%;
+      transform: none;
+      padding: 15px;
+      box-sizing: border-box;
+    } 
+    .flat-button {
+      float: left;
+      display: block;
+      margin: 20px 10px 0 5px;
+      width: 125px;
+      text-align: center;
+    }
+        
+    h1{
+      font-size: 43px;
+    }
 
-//   .home-page .text-zone {
-//       position: initial;
-//       width: 100%;
-//       transform: none;
-//       padding: 10px;
-//       box-sizing: border-box;
-//   }
-
-//   .home-page .flat-button {
-//       float: none;
-//       display: block;
-//       margin: 20px auto 0 auto;
-//       width: 124px;
-//   }
-
-//   .logo-container {
-//       position: relative;
-//       width: 100px;
-//       height: auto;
-//       top: 50px;
-//       right: 0;
-//       box-sizing: border-box;
-//       margin: auto;
-//       left: 0;
-//   }
-
-//   .logo-container svg {
-//       position: absolute;
-//       top: auto;
-//       right: auto;
-//       bottom: auto;
-//       left: 0;
-//       margin: auto;
-//   }
-// }
+    .logo-container {
+      position: relative;
+      width: 100px;
+      height: auto;
+      top: 50px;
+      right: 0;
+      box-sizing: border-box;
+      margin: auto;
+      left: 0;
+    
+      svg {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+      }
+    }
+  }
+}

@@ -50,7 +50,7 @@ const Home = () => {
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 <Link to="#" onClick={openResume} className='flat-button'>MY RESUME</Link>
             </div>
-            <Logo />
+            {/* <Logo /> */}
             <Drawing />
         </div>
     );

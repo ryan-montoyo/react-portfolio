@@ -16,6 +16,17 @@ import py from '../../assets/images/pylogo.png'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+  const [toggleAnimation, setToggleAnimation] = useState(false);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setToggleAnimation((prev) => !prev);
+    }, 10000); // Adjust the interval time as needed
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -26,6 +37,27 @@ const About = () => {
       clearTimeout(timeoutId);
     };
   }, []);
+
+  const randomBetween = (min, max) => {
+    return Math.random() * (max - min) + min;
+  };
+  
+  const createStars = (numStars) => {
+    const stars = [];
+    for (let i = 0; i < numStars; i++) {
+      stars.push(
+        <div
+          key={i}
+          className="star"
+          style={{
+            right: `${randomBetween(0, 100)}vw`, // Random horizontal position
+            top: `${randomBetween(0, 100)}vh`, // Random vertical position
+          }}
+        ></div>
+      );
+    }
+    return stars;
+  };
 
   return (
     <>
@@ -55,7 +87,7 @@ const About = () => {
 
 
         </div>
-
+        <div className='block'></div>
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
@@ -78,6 +110,15 @@ const About = () => {
             </div>
           </div>
         </div>
+            <div className={`moving-stars-container ${toggleAnimation ? '' : 'second-wave'}`}>
+            {/* Generate stars */}
+            {createStars(200)}
+        </div>
+        <div className={`moving-stars-container ${toggleAnimation ? 'second-wave' : ''}`}>
+            {/* Generate stars */}
+            {createStars(200)}
+        </div>
+        <div style={{ height: '50vh' }}></div>
       </div>
       <Loader type="ball-pulse-sync" />
     </>

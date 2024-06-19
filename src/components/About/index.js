@@ -79,7 +79,7 @@ const About = () => {
             I am also devoted to continuous learning and 'being a sponge' as much as I can as it makes me better and allows me to have larger contributions to all of my tasks. 
             </p>
             <p>
-            Some of my techincal skills include: C++, Python, JavaScript, HTML, CSS, SQL, React, Flask, MySQL, JSON, Firebase and much more!
+            Some of my techincal skills include: C++, Python, JavaScript, Swift, HTML, CSS, SQL, React, Flask, MySQL, Firebase and much more!
             <br></br>
             <br></br>
             Feel free to contact or connect with me!

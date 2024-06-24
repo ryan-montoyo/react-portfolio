@@ -16,7 +16,7 @@ const Sidebar = () => {
         <div className='nav-bar'>
         <Link className='logo' to='/'>
             <img src={face} alt='logo' />
-            {/* <img className='sub-logo' src={LogoSubtitle} alt='slobodan' /> */}
+            <img className='sub-logo' src={LogoSubtitle} alt='slobodan' />
         </Link>
         <nav className={showNav ? 'mobile-show' : ''}>
             <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" to="/">

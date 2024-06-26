@@ -12,7 +12,7 @@ const Drawing = () => {
       targets: '.st0, .st1',
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutQuad',
-      duration: 5000,
+      duration: 6000,
       delay: function(el, i) {
         return i * 250;
       },

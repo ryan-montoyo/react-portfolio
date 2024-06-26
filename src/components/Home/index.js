@@ -27,7 +27,7 @@ const Home = () => {
 
     const openResume = (event) => {
         event.preventDefault(); // Prevent the default behavior of the link
-        window.open('/Ryan-Montoyo-Resume.pdf', '_blank');
+        window.open('/Ryan_Montoyo_Resume.pdf', '_blank');
     };
 
     return (

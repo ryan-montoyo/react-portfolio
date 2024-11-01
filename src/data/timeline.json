@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Hunter College",
+      "organization": "Computer Science B.A.",
+      "date": "Aug 2022 - May 2025",
+      "image": "/images/timeline/1/hunter_logo.png"
+    },
+    {
+      "title": "Yext",
+      "organization": "Software Engineering Mentee",
+      "date": "Sep 2023 - Dec 2023",
+      "image": "/images/timeline/1/Yext_500.png"
+    },
+    {
+      "title": "Project Basta",
+      "organization": "Basta Fellow",
+      "date": "Dec 2023 - Present",
+      "image": "/images/timeline/1/basta_logo.png"
+    },
+    {
+      "title": "Movement Vault",
+      "organization": "Software Engineering Intern",
+      "date": "Sep 2024 - Present",
+      "image": "/images/timeline/1/movement_vault_logo.jpeg"
+    }
+  ]
+  

@@ -5,7 +5,7 @@ import LogoS from '../../assets/images/logo-s.png'
 import face from '../../assets/images/rm-logo.png'
 import LogoSubtitle from '../../assets/images/rm-wordmark.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faEnvelope, faUser, faComputer, faLaptop, faLaptopCode, faFile, faFileCode, faFolderOpen, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faEnvelope, faUser, faComputer, faLaptop, faLaptopCode, faFile, faFileCode, faFolderOpen, faBars, faClose, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useRef, useState } from 'react'
 
@@ -22,15 +22,23 @@ const Sidebar = () => {
             <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" to="/">
                 <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
             </NavLink>
+
             <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className='about-link' to="/about">
                 <FontAwesomeIcon icon={faUser} color='#4d4d4e' />
             </NavLink>
+
+            <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className='experience-link'to="/experience">
+                <FontAwesomeIcon icon={faBriefcase} color='#4d4d4e' />
+            </NavLink>
+
             <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className='projects-link' to="/projects">
                 <FontAwesomeIcon icon={faFolderOpen} color='#4d4d4e' />
             </NavLink>
+
             <NavLink onClick={() => setShowNav(false)} exact="true" activeclassname="active" className='contact-link' to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
             </NavLink>
+
             <FontAwesomeIcon onClick={() => setShowNav(false)} icon={faClose} color='#1eb8ff' size='3x' className='close-icon'/>
         </nav>
         <ul>

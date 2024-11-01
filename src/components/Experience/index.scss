@@ -1,0 +1,192 @@
+.projects-page {
+  padding-left: 50px;
+  padding-right: 50px;
+  width: calc(100% - 100px);
+  height: 100%;
+  overflow: auto;
+
+  h1.page-title {
+    margin-left: 100px;
+    margin-top: 50px;
+  }
+
+  .timeline-container {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+    overflow-x: auto;
+  }
+
+  /* Timeline Line */
+  .timeline-line {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #00A9FF;
+    z-index: 1;
+  }
+
+  /* Timeline Event */
+  .timeline-event {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #04000065;
+    color: white;
+    padding: 10px;
+    width: 270px;
+    min-height: 130px; /* Ensures a consistent minimum size */
+    border-radius: 25px;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+    border: 3px solid #00A9FF;
+  }
+
+  /* Alternate positions for staggered effect */
+  .timeline-event.odd {
+    margin-top: -250px; /* Positions event above the line */
+  }
+
+  .timeline-event.even {
+    margin-top: 150px; /* Positions event below the line */
+  }
+
+  /* Image styling */
+  .image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5%;
+    margin-right: 10px;
+    margin-left: 20px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 180px; /* Controls how wide the text area can be */
+    flex-grow: 1; /* Allows text container to use available space */
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .time {
+    font-size: 12px;
+    color: lightgray;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .container.projects-page {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+
+      h1.page-title {
+          margin-left: 20px;
+          margin-top: 20px;
+      }
+
+      .timeline-container {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 50px 0;
+        overflow-x: auto;
+      }
+    
+      /* Timeline Line */
+      .timeline-line {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 3px;
+        height: 100%;
+        background-color: #00A9FF;
+        z-index: 1;
+      }
+    
+      /* Timeline Event */
+      .timeline-event {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #080c1d;
+        color: white;
+        padding: 10px;
+        width: 80%;
+        min-height: 130px; /* Ensures a consistent minimum size */
+        border-radius: 25px;
+        margin: 10px;
+        position: relative;
+        z-index: 2;
+        border: 3px solid #00A9FF;
+      }
+    
+      // /* Alternate positions for staggered effect */
+      // .timeline-event.odd {
+      //   margin-top: -250px; /* Positions event above the line */
+      // }
+    
+      // .timeline-event.even {
+      //   margin-top: 150px; /* Positions event below the line */
+      // }
+    
+      /* Image styling */
+      .image {
+        width: 90px;
+        height: 90px;
+        border-radius: 5%;
+        margin-right: 10px;
+        margin-left: 20px;
+        flex-shrink: 0; /* Prevents image from shrinking */
+      }
+    
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 180px; /* Controls how wide the text area can be */
+        flex-grow: 1; /* Allows text container to use available space */
+        padding: 10px;
+      }
+    
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+      }
+    
+      .subtitle {
+        font-size: 16px;
+        margin: 5px 0;
+      }
+    
+      .time {
+        font-size: 14px;
+        color: lightgray;
+      }
+
+  }
+}

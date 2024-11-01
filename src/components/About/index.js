@@ -6,6 +6,7 @@ import {
   faHtml5,
   faJsSquare,
   faReact,
+  faSwift,
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
@@ -71,7 +72,7 @@ const About = () => {
             />
           </h1>
           <p>
-            Hello, I'm Ryan Montoyo. I am currently a rising senior at Hunter College pursuing a Bachelor's Degree in Computer Science. 
+            Hello, I'm Ryan Montoyo. I am currently a senior at Hunter College pursuing a Bachelor's Degree in Computer Science. 
             I am a Full Stack Developer who is currently searching for Software Engineering internships. 
             <br></br>
             <br></br>
@@ -79,7 +80,7 @@ const About = () => {
             I am also devoted to continuous learning and 'being a sponge' as much as I can as it makes me better and allows me to have larger contributions to all of my tasks. 
             </p>
             <p>
-            Some of my techincal skills include: C++, Python, JavaScript, Swift, HTML, CSS, SQL, React, Flask, MySQL, Firebase and much more!
+            Some of my techincal skills include: C++, Python, JavaScript, Swift/SwiftUI, HTML/CSS, Kotlin/Jetpack Compose, SQL, React, Flask, MySQL, Firebase and much more!
             <br></br>
             <br></br>
             Feel free to contact or connect with me!
@@ -97,7 +98,7 @@ const About = () => {
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />
             </div>
             <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+              <FontAwesomeIcon icon={faSwift} color="#FA7343" />
             </div>
             <div className="face4">
               <FontAwesomeIcon icon={faReact} color="#5ED4F4" />

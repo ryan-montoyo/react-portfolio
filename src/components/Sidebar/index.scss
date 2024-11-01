@@ -38,6 +38,7 @@
             font-size: 22px;
             color: #4d4d4e;
             display: block;
+            padding-left: 2px;
             line-height: 51px;
             position: relative;
             text-decoration: none;
@@ -81,6 +82,11 @@
         a.about-link {
             &:after {
                 content: 'ABOUT';
+            }
+        }
+        a.experience-link {
+            &:after {
+                content: 'CAREER';
             }
         }
         a.projects-link {

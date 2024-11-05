@@ -17,17 +17,18 @@
     position: relative;
     padding: 50px 0;
     overflow-x: auto;
+    z-index: 1; /* Lower than the events */
   }
 
   /* Timeline Line */
   .timeline-line {
     position: absolute;
-    top: 43%;
+    top: 42.5%; /* Centered between rows */
     left: 0;
     right: 0;
     height: 3px;
     background-color: #00A9FF;
-    z-index: 1;
+    z-index: 0; /* Behind the events and connectors */
   }
 
   /* Timeline Event */
@@ -35,7 +36,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #04000065;
+    background-color: #080c1d;
     color: white;
     padding: 10px;
     width: 270px;
@@ -43,7 +44,7 @@
     border-radius: 25px;
     margin: 10px;
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Above the timeline and connectors */
     border: 3px solid #00A9FF;
   }
 
@@ -54,6 +55,30 @@
 
   .timeline-event.even {
     margin-top: 150px; /* Positions event below the line */
+  }
+
+  /* Connect events to the timeline with vertical lines */
+  .timeline-event::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 22px;
+    background-color: #00A9FF;
+    z-index: 1; /* Just above the main timeline but below the event */
+  }
+
+  /* Position the vertical line for events in the top row */
+  .timeline-event.odd::after {
+    bottom: -25px; /* Position above the event */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Position the vertical line for events in the bottom row */
+  .timeline-event.even::after {
+    top: -24px; /* Position below the event */
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* Image styling */
@@ -90,103 +115,97 @@
     font-size: 12px;
     color: lightgray;
   }
-
 }
 
 @media screen and (max-width: 1200px) {
   .container.projects-page {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 
-      h1.page-title {
-          margin-left: 20px;
-          margin-top: 20px;
-      }
+    h1.page-title {
+      margin-left: 20px;
+      margin-top: 20px;
+    }
 
-      .timeline-container {
-        background-color: transparent;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        padding: 50px 0;
-        overflow-x: auto;
-      }
-    
-      /* Timeline Line */
-      .timeline-line {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 3px;
-        height: 100%;
-        background-color: #00A9FF;
-        z-index: 1;
-      }
-    
-      /* Timeline Event */
-      .timeline-event {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        background-color: #080c1d;
-        color: white;
-        padding: 10px;
-        width: 80%;
-        min-height: 130px; /* Ensures a consistent minimum size */
-        border-radius: 25px;
-        margin: 10px;
-        position: relative;
-        z-index: 2;
-        border: 3px solid #00A9FF;
-      }
-    
-      // /* Alternate positions for staggered effect */
-      // .timeline-event.odd {
-      //   margin-top: -250px; /* Positions event above the line */
-      // }
-    
-      // .timeline-event.even {
-      //   margin-top: 150px; /* Positions event below the line */
-      // }
-    
-      /* Image styling */
-      .image {
-        width: 90px;
-        height: 90px;
-        border-radius: 5%;
-        margin-right: 10px;
-        margin-left: 20px;
-        flex-shrink: 0; /* Prevents image from shrinking */
-      }
-    
-      .text-container {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        max-width: 180px; /* Controls how wide the text area can be */
-        flex-grow: 1; /* Allows text container to use available space */
-        padding: 10px;
-      }
-    
-      .title {
-        font-size: 20px;
-        font-weight: 600;
-        margin: 0;
-      }
-    
-      .subtitle {
-        font-size: 16px;
-        margin: 5px 0;
-      }
-    
-      .time {
-        font-size: 14px;
-        color: lightgray;
-      }
+    .timeline-container {
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 50px 0;
+      overflow-x: auto;
+    }
 
+    /* Timeline Line */
+    .timeline-line {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      background-color: #00A9FF;
+      z-index: 1;
+    }
+
+    /* Timeline Event */
+    .timeline-event {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #080c1d;
+      color: white;
+      padding: 10px;
+      width: 80%;
+      min-height: 130px; /* Ensures a consistent minimum size */
+      border-radius: 25px;
+      margin: 10px;
+      position: relative;
+      z-index: 2;
+      border: 3px solid #00A9FF;
+    }
+
+    /* Disable connector lines for smaller screens */
+    .timeline-event::after {
+      display: none;
+    }
+
+    /* Image styling */
+    .image {
+      width: 90px;
+      height: 90px;
+      border-radius: 5%;
+      margin-right: 10px;
+      margin-left: 20px;
+      flex-shrink: 0; /* Prevents image from shrinking */
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      max-width: 180px; /* Controls how wide the text area can be */
+      flex-grow: 1; /* Allows text container to use available space */
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    .time {
+      font-size: 14px;
+      color: lightgray;
+    }
   }
 }

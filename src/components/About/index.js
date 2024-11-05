@@ -121,7 +121,7 @@ const About = () => {
         </div>
         <div style={{ height: '50vh' }}></div>
       </div>
-      <Loader type="ball-pulse-sync" />
+      
     </>
   )
 }

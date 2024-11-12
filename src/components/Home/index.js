@@ -9,6 +9,8 @@ import Drawing from './Drawing';
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
 
+    const hiArray = ['H', 'i', ','];
+    const imArray = ['I', "'", 'm'];
     const nameArray = [' ', 'R', 'y', 'a', 'n', ','];
     const jobArray = [
         'S', 'o', 'f', 't', 'w', 'a', 'r', 'e', ' ',
@@ -34,15 +36,10 @@ const Home = () => {
         <div className="container home-page">
             <div className="text-zone">
                 <h1>
-                    <span className={letterClass}>H</span>
-                    <span className={`${letterClass} _12`}>i</span>
-                    <span className={`${letterClass} _12`}>,</span>
+                    <AnimatedLetters letterClass={letterClass} strArray={hiArray} idx={0} />
                     <br />
-                    <span className={`${letterClass} _13`}>I</span>
-                    <span className={`${letterClass} _14`}>'</span>
-                    <span className={`${letterClass} _14`}>m</span>
-                    {/* <img src={LogoTitle} alt="developer"/> */}
-                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={8} />
+                    <AnimatedLetters letterClass={letterClass} strArray={imArray} idx={3} />
+                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={6} />
                     <br />
                     <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={12} />
                 </h1>
@@ -50,7 +47,6 @@ const Home = () => {
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
                 <Link to="#" onClick={openResume} className='flat-button'>MY RESUME</Link>
             </div>
-            {/* <Logo /> */}
             <Drawing />
         </div>
     );

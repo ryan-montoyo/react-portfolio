@@ -1,6 +1,15 @@
 {
     "portfolio" : [
         {
+            "cover": "/projects/1/unnamed.png",
+            "title": "Spoons",
+            "subtitle": "AI Journaling Companion App",
+            "description": "Django, ReactJS, OpenAI API",
+            "url": " ",  
+            "git": "https://github.com/Prasangati/Spooons",
+            "live": false
+        },
+        {
             "cover": "/projects/1/Screenshot 2024-07-02 at 8.33.47 PM.png",
             "title": "Fitting Room",
             "subtitle": "Virtual Closet App (iOS)",
